@@ -333,7 +333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4713172197556060}
-  - component: {fileID: 2953353296961772716}
+  - component: {fileID: 8449077774270311979}
   - component: {fileID: 33788833877621658}
   - component: {fileID: 23804383695937886}
   m_Layer: 0
@@ -361,7 +361,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2953353296961772716
+--- !u!114 &8449077774270311979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,11 +374,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "\xF6nsoltekerlek": {fileID: 0}
-  "\xF6nsa\u011Ftekerlek": {fileID: 0}
+  "\xF6nsagtekerlek": {fileID: 0}
   arkasoltekerlek: {fileID: 0}
-  "arkasa\u011Ftekerlek": {fileID: 0}
+  arkasagtekerlek: {fileID: 0}
   motorhizi: 0
   "d\xF6nmehizi": 0
+  tus: {fileID: 0}
 --- !u!33 &33788833877621658
 MeshFilter:
   m_ObjectHideFlags: 0

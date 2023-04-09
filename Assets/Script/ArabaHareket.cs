@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class ArabaHareket : MonoBehaviour
 {
-    public WheelCollider önsoltekerlek, önsağtekerlek, arkasoltekerlek, arkasağtekerlek;
-    public float motorhizi, dönmehizi;
-    public Joystick tuş;
-
+    public WheelCollider �nsoltekerlek, �nsagtekerlek, arkasoltekerlek, arkasagtekerlek;
+    public float motorhizi, d�nmehizi;
+    public Joystick tus;
+    
+   
     
     void Update()
-    {  
+    {
+
         //ileri geri gitme
-        arkasağtekerlek.motorTorque = motorhizi * tuş.Vertical;
-        arkasoltekerlek.motorTorque = motorhizi * tuş.Vertical;
-        //sağa sola dönme
-        önsağtekerlek.steerAngle = dönmehizi * tuş.Horizontal;
-        önsoltekerlek.steerAngle = dönmehizi * tuş.Horizontal;
+        arkasagtekerlek.motorTorque = motorhizi * tus.Vertical;
+        arkasoltekerlek.motorTorque = motorhizi * tus.Vertical;
+        //sa�a sola d�nme
+        �nsagtekerlek.steerAngle = d�nmehizi * tus.Horizontal;
+        �nsoltekerlek.steerAngle = d�nmehizi * tus.Horizontal;
+
+
     }
-   
-
-
 }
