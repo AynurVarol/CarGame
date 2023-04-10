@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33398068675708366}
   - component: {fileID: 23143927614406544}
   m_Layer: 0
-  m_Name: wheel_2_4
+  m_Name: "\xF6nsoltekerlek"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 33352765189398758}
   - component: {fileID: 23040939303706512}
   m_Layer: 0
-  m_Name: wheel_3
+  m_Name: "arkasa\u011Ftekerlek"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 33740961736926304}
   - component: {fileID: 23153007585845282}
   m_Layer: 0
-  m_Name: wheel_1_6
+  m_Name: arkasoltekerlek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 33303147567042718}
   - component: {fileID: 23747511979774238}
   m_Layer: 0
-  m_Name: wheel_1_5
+  m_Name: "\xF6nsagtekerlek"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

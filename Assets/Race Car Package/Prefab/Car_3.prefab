@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4901448687493340}
   - component: {fileID: 33847851051931724}
-  - component: {fileID: 5678855067153719762}
   - component: {fileID: 23967449910616976}
   m_Layer: 0
   m_Name: Car_3
@@ -30,8 +29,8 @@ Transform:
   m_LocalPosition: {x: -8.939141, y: 0.25098568, z: 0.13716738}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4071379965466514}
   - {fileID: 4556190530372642}
+  - {fileID: 4071379965466514}
   - {fileID: 4853687492290174}
   - {fileID: 4833938299319682}
   m_Father: {fileID: 0}
@@ -45,25 +44,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175599118711950}
   m_Mesh: {fileID: 4300030, guid: 6df8799e47834944c85abaf3e659049d, type: 3}
---- !u!114 &5678855067153719762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1175599118711950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cf0826a9dcc50747b4ebae339245641, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  "\xF6nsoltekerlek": {fileID: 0}
-  "\xF6nsagtekerlek": {fileID: 0}
-  arkasoltekerlek: {fileID: 0}
-  arkasagtekerlek: {fileID: 0}
-  motorhizi: 0
-  "d\xF6nmehizi": 0
-  tus: {fileID: 0}
 --- !u!23 &23967449910616976
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -137,7 +117,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4901448687493340}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33665010222420762
 MeshFilter:
@@ -299,7 +279,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4901448687493340}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33282296818612064
 MeshFilter:

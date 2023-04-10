@@ -760,7 +760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &653023688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -820,6 +820,101 @@ RectTransform:
   m_AnchoredPosition: {x: 171, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &696426503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 696426507}
+  - component: {fileID: 696426506}
+  - component: {fileID: 696426505}
+  - component: {fileID: 696426504}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!135 &696426504
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696426503}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &696426505
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696426503}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d6b026b7ab48efc43b952e8816dc395b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &696426506
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696426503}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &696426507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696426503}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.9, y: 19.5, z: 45.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,7 +2006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1355773701
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2935,9 +3030,9 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 1
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
     m_Alignment: 4
@@ -3206,25 +3301,6 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
---- !u!114 &1760975099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760975094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cf0826a9dcc50747b4ebae339245641, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  "\xF6nsoltekerlek": {fileID: 0}
-  "\xF6nsagtekerlek": {fileID: 0}
-  arkasoltekerlek: {fileID: 0}
-  arkasagtekerlek: {fileID: 0}
-  motorhizi: 0
-  "d\xF6nmehizi": 0
-  tus: {fileID: 0}
 --- !u!54 &1760975100
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3325,34 +3401,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5678855067153719762, guid: 7270d86670806f44a9c24b44dfc8c67c, type: 3}
-      propertyPath: tus
-      value: 
-      objectReference: {fileID: 982994814}
-    - target: {fileID: 5678855067153719762, guid: 7270d86670806f44a9c24b44dfc8c67c, type: 3}
-      propertyPath: motorhizi
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 5678855067153719762, guid: 7270d86670806f44a9c24b44dfc8c67c, type: 3}
-      propertyPath: "d\xF6nmehizi"
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5678855067153719762, guid: 7270d86670806f44a9c24b44dfc8c67c, type: 3}
-      propertyPath: "\xF6nsagtekerlek"
-      value: 
-      objectReference: {fileID: 1773073279}
-    - target: {fileID: 5678855067153719762, guid: 7270d86670806f44a9c24b44dfc8c67c, type: 3}
-      propertyPath: "\xF6nsoltekerlek"
-      value: 
-      objectReference: {fileID: 1773073282}
-    - target: {fileID: 5678855067153719762, guid: 7270d86670806f44a9c24b44dfc8c67c, type: 3}
-      propertyPath: arkasagtekerlek
-      value: 
-      objectReference: {fileID: 1773073279}
-    - target: {fileID: 5678855067153719762, guid: 7270d86670806f44a9c24b44dfc8c67c, type: 3}
-      propertyPath: arkasoltekerlek
-      value: 
-      objectReference: {fileID: 1773073280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7270d86670806f44a9c24b44dfc8c67c, type: 3}
 --- !u!1 &1773073272 stripped
@@ -3397,13 +3445,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf0826a9dcc50747b4ebae339245641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\xF6nsoltekerlek": {fileID: 0}
-  "\xF6nsagtekerlek": {fileID: 0}
-  arkasoltekerlek: {fileID: 0}
-  arkasagtekerlek: {fileID: 0}
+  "\xF6nsoltekerlek": {fileID: 1773073282}
+  "\xF6nsagtekerlek": {fileID: 1773073281}
+  arkasoltekerlek: {fileID: 1773073280}
+  arkasagtekerlek: {fileID: 1773073279}
   motorhizi: 0
   "d\xF6nmehizi": 0
-  tus: {fileID: 0}
+  tus: {fileID: 982994814}
 --- !u!146 &1773073279
 WheelCollider:
   m_ObjectHideFlags: 0

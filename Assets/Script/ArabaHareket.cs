@@ -14,8 +14,8 @@ public class ArabaHareket : MonoBehaviour
     {
 
         //ileri geri gitme
-        arkasagtekerlek.motorTorque = motorhizi * tus.Vertical;
-        arkasoltekerlek.motorTorque = motorhizi * tus.Vertical;
+        arkasagtekerlek.motorTorque = motorhizi * -tus.Vertical;
+        arkasoltekerlek.motorTorque = motorhizi * -tus.Vertical;
         //saða sola dönme
         önsagtekerlek.steerAngle = dönmehizi * tus.Horizontal;
         önsoltekerlek.steerAngle = dönmehizi * tus.Horizontal;
