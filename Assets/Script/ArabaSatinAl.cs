@@ -3,110 +3,119 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ArabaSatinAl : MonoBehaviour
+namespace CarGame
 {
-    public float para;
-    public GameObject[] Arabalar;
-    public GameObject panel;
-    public bool a1, a2, a3;
-    public Text sarýarabayazýsý, maviarabayazýsý, siyaharabayazýsý;
-
-    // Start is called before the first frame update
-    void Start()
+    public class ArabaSatinAl : MonoBehaviour
     {
+        public float para;
+        public GameObject[] arabalar;
+        public GameObject panel;
+        public bool a1, a2, a3;
+        public Text sarýarabayazýsý, maviarabayazýsý, siyaharabayazýsý;
+        public CarSelectController carSelector;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.D))
+        void Update()
         {
-            panel.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                panel.SetActive(true);
+            }
         }
 
-    }
-
-    public void anaArabam()
-    {
-        for (int i = 0; i < Arabalar.Length; i++)
+        public void AnaArabam()
         {
-            Arabalar[i].SetActive(false);
-            Arabalar[0].SetActive(true);
+            CloseAllVehicles();
+            arabalar[0].SetActive(true);
             panel.SetActive(false);
+        }
+
+        public void CloseAllVehicles()
+        {
+            for (int i = 0; i < arabalar.Length; i++)
+            {
+                arabalar[i].SetActive(false);
+            }
+
+        }
+
+        public void OpenVehicle(CarType type, int index)
+        {
+            CloseAllVehicles();
+            arabalar[index].SetActive(true);
+            panel.SetActive(false);
+            switch (type)
+            {
+                case CarType.Red:
+                    break;
+                case CarType.Yellow:
+                    a1 = true;
+                    sarýarabayazýsý.text = "Seçiniz";
+                    carSelector.SelectedCar = arabalar[index];
+                    break;
+                case CarType.Blue:
+                    a2 = true;
+                    maviarabayazýsý.text = "Seçiniz";
+                    break;
+                case CarType.Black:
+                    a3 = true;
+                    siyaharabayazýsý.text = "Seçiniz";
+                    break;
+                default:
+                    break;
+            }
 
 
 
         }
-    }
 
-    public void sarýaraba()
-    {
-        if (para >= 300 || a1)
+        public void SarýAraba()
         {
-            para -= 300;
-
-            for (int i = 0; i < Arabalar.Length; i++)
+            if (para >= 300 || a1)
             {
-                Arabalar[i].SetActive(false);
-                Arabalar[1].SetActive(true);
-                panel.SetActive(false);
-                a1 = true;
-                sarýarabayazýsý.text = "Seçiniz";
-
-
+                para -= 300;
+                OpenVehicle(CarType.Yellow, 1);
 
             }
+
         }
 
 
-
-    }
-
-
-    public void maviaraba()
-    {
-        if (para >= 450 || a2)
+        public void MaviAraba()
         {
-            para -= 450;
-
-            for (int i = 0; i < Arabalar.Length; i++)
+            if (para >= 450 || a2)
             {
-                Arabalar[i].SetActive(false);
-                Arabalar[2].SetActive(true);
-                panel.SetActive(false);
-                a2 = true;
-                maviarabayazýsý.text = "Seçiniz";
+                para -= 450;
 
+                OpenVehicle(CarType.Blue, 2);
 
             }
+
+
+
         }
 
-
-
-    }
-
-    public void siyaharaba()
-    {
-        if (para >= 600 || a3)
+        public void SiyahAraba()
         {
-            para -= 600;
-
-            for (int i = 0; i < Arabalar.Length; i++)
+            if (para >= 600 || a3)
             {
-                Arabalar[i].SetActive(false);
-                Arabalar[3].SetActive(true);
-                panel.SetActive(false);
-                a3 = true;
-                siyaharabayazýsý.text = "Seçiniz";
+                para -= 600;
 
-
+                OpenVehicle(CarType.Black, 3);
 
             }
+
+
+
+        }
+
+        public enum CarType
+        {
+            Red,
+            Yellow,
+            Blue,
+            Black
         }
 
 
-
     }
-
 }
