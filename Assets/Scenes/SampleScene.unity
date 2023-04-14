@@ -713,7 +713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   para: 600
-  Arabalar:
+  arabalar:
   - {fileID: 1039092714}
   - {fileID: 1773073272}
   - {fileID: 1760975094}
