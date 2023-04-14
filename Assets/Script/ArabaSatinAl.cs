@@ -64,8 +64,6 @@ namespace CarGame
                     break;
             }
 
-
-
         }
 
         public void SarýAraba()
@@ -116,6 +114,12 @@ namespace CarGame
             Black
         }
 
-
     }
+
+    public class CarSelectController
+    {
+        public GameObject SelectedCar { get; internal set; }
+    }
+
+
 }
