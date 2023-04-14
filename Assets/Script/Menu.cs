@@ -2,39 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Menu : MonoBehaviour
+
+namespace CarGame
 {
-    public GameObject menupaneli;
-
-    public void OyunuBaslat()
+    public class Menu : MonoBehaviour
     {
-        Application.LoadLevel(1);
-        Time.timeScale = 1.0f;
+        public GameObject menupaneli;
+
+        [System.Obsolete]
+        public void OyunuBaslat()
+        {
+            Application.LoadLevel(1);
+            Time.timeScale = 1.0f;
+        }
+
+
+        public void MenuyuAc()
+        {
+            menupaneli.SetActive(true);
+            Time.timeScale = 0.0f;
+
+        }
+
+        public void OyunaDevamEt()
+        {
+            menupaneli.SetActive(false);
+            Time.timeScale = 1.0f;
+
+        }
+
+        [System.Obsolete]
+        public void AnaMenuyeGit()
+        {
+            Application.LoadLevel(0);
+        }
+
+
+
+
+
+
     }
-
-
-    public void menuyuAc()
-    {
-        menupaneli.SetActive(true);
-        Time.timeScale = 0.0f;
-
-    }
-
-    public void oyunaDevamEt()
-    {
-        menupaneli.SetActive(false);
-        Time.timeScale = 1.0f;
-
-    }
-
-    public void AnaMenuyeGit()
-    {
-        Application.LoadLevel(0);
-    }
-
-
-
-
-
-
 }
