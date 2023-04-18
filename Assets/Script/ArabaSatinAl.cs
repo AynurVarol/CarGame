@@ -14,6 +14,10 @@ namespace CarGame
         public Text sarýarabayazýsý, maviarabayazýsý, siyaharabayazýsý;
         public CarSelectController carSelector;
 
+        private void Awake()
+        {
+            carSelector = new CarSelectController();
+        }
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.D))
