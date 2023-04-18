@@ -1,34 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 namespace CarGame
 {
     public class Menu : MonoBehaviour
     {
         public GameObject menupaneli;
+        public GameObject panel;
+        public Button menuButton;
+        public Button panelButton;
 
-        [System.Obsolete]
-        public void OyunuBaslat()
+        private void Awake()
         {
-            Application.LoadLevel(1);
-            Time.timeScale = 1.0f;
+            menuButton.onClick.AddListener(OnMenuButtonClicked);
+            panelButton.onClick.AddListener(OnPanelButtonClicked);
         }
 
-
-        public void MenuyuAc()
+        private void OnPanelButtonClicked()
         {
-            menupaneli.SetActive(true);
-            Time.timeScale = 0.0f;
-
+            var isActive = panel.gameObject.activeSelf;
+            panel.gameObject.SetActive(!isActive);
         }
 
-        public void OyunaDevamEt()
+        private void OnMenuButtonClicked()
         {
-            menupaneli.SetActive(false);
-            Time.timeScale = 1.0f;
-
+            bool isActive = menupaneli.gameObject.activeSelf;
+            menupaneli.gameObject.SetActive(!isActive);
         }
 
         [System.Obsolete]
