@@ -5,10 +5,11 @@ using UnityEngine;
 public class TargetCamera2 : MonoBehaviour
 {
     public Transform target;
-    public float speed;
+   
     public Vector3 offset;
     public float rotationSpeed;
-    public Vector3 min,max;
+    public float translateSpeed;
+    
 
 
     private Camera _cam;
@@ -23,19 +24,19 @@ public class TargetCamera2 : MonoBehaviour
         CameraMove();
         CameraRotate();
     }
-    public void CameraMove()
-    {
-        _cam.transform.position = Vector3.MoveTowards(_cam.transform.position, target.position + offset, speed );
-    }
+   
     public void CameraRotate()
     {
+        var direction = target.position - transform.position;
+        var rotation = Quaternion.LookRotation(direction, Vector3.up);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
 
-        var targetRotation = Quaternion.Lerp(_cam.transform.rotation, target.localRotation, rotationSpeed * Time.deltaTime);
-        targetRotation.x = 0;
-        targetRotation.z = 0;
+        
+    }
 
-        targetRotation.eulerAngles = new Vector3(0, Mathf.Clamp(targetRotation.eulerAngles.y, min.y, max.y), 0);
-        _cam.transform.rotation = targetRotation;
-
+    public void CameraMove()
+    {
+        var targetPosition = target.TransformPoint(offset);
+        transform.position = Vector3.Lerp(transform.position, targetPosition, translateSpeed * Time.deltaTime);
     }
 }

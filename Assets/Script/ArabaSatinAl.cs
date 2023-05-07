@@ -13,6 +13,7 @@ namespace CarGame
         public bool a1, a2, a3;
         public Text sarýarabayazýsý, maviarabayazýsý, siyaharabayazýsý;
         public CarSelectController carSelector;
+        public Text ToplananGold;
 
         private void Awake()
         {
@@ -24,7 +25,13 @@ namespace CarGame
             {
                 panel.SetActive(true);
             }
+
+            ToplananGold.text = "Altýn " + para;
         }
+
+      
+
+        
 
         public void AnaArabam()
         {
