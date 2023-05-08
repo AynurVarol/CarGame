@@ -131,13 +131,17 @@ namespace CarGame
     public class GoldSpawner : MonoBehaviour
     {
         public Gold goldRes;
+        public Vector3 offset =new Vector3(2,0,2);
 
         public void SpawnGold(int count)
         {
             for (int i = 0; i < count; i++)
             {
-
-                Instantiate(goldRes, transform.position, Quaternion.identity);
+                var pos = transform.position + (offset * i);
+                // 1. pos = (0,0,0)
+                //2. pos =  (2,0,2)
+                //3.pos = (4,0,4)
+                Instantiate(goldRes, pos, Quaternion.identity);
             }
         }
 
