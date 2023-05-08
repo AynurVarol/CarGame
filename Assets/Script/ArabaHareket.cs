@@ -10,7 +10,7 @@ namespace CarGame
         public float motorhizi, donmehizi;
         public Joystick tus;
         public GameObject Gold;
-        public Transform sp1, sp2, sp3;
+        public Transform konum1, konum2, konum3;
         ArabaSatinAl market;
 
 
@@ -36,9 +36,10 @@ namespace CarGame
         {
             if(tus.Vertical > 0)
             {
-                GameObject goldobje = Instantiate(Gold, sp1.transform.position, Quaternion.identity);
-                GameObject goldobje2 = Instantiate(Gold, sp2.transform.position, Quaternion.identity);
-                GameObject goldobje3 = Instantiate(Gold, sp3.transform.position, Quaternion.identity);
+                GameObject goldobje = Instantiate(Gold, konum1.transform.position, Quaternion.identity);
+                GameObject goldobje2 = Instantiate(Gold, konum2.transform.position, Quaternion.identity);
+                GameObject goldobje3 = Instantiate(Gold, konum3.transform.position, Quaternion.identity);
+                Debug.Log("altýn objesi oluþturdu");
 
 
             }
