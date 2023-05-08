@@ -1795,7 +1795,7 @@ PrefabInstance:
     - target: {fileID: 8449077774270311979, guid: e49a8bcd44434de4fbd15b46bf3fd304, type: 3}
       propertyPath: konum2
       value: 
-      objectReference: {fileID: 1332747694}
+      objectReference: {fileID: 1732649592}
     - target: {fileID: 8449077774270311979, guid: e49a8bcd44434de4fbd15b46bf3fd304, type: 3}
       propertyPath: konum3
       value: 
