@@ -11,11 +11,10 @@ namespace CarGame
         public Joystick tus;
         public float spawnDuration = 4.0f;
         public bool canMove;
-        public GoldClon goldClon;
         public GameObject gold;
 
 
-
+        private GoldClon goldClon;
         private ArabaSatinAl _market;
 
 
