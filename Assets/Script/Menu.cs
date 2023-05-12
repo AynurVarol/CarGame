@@ -16,7 +16,7 @@ namespace CarGame
         private void Awake()
         {
             menuButton.onClick.AddListener(OnMenuButtonClicked);
-            panelButton.onClick.AddListener(OnPanelButtonClicked);
+            
         }
 
         private void OnPanelButtonClicked()

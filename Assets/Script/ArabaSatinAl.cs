@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 namespace CarGame
 {
@@ -14,6 +15,7 @@ namespace CarGame
         public Text sarýarabayazýsý, maviarabayazýsý, siyaharabayazýsý;
         public CarSelectController carSelector;
         public Text ToplananGold;
+        
 
         private void Awake()
         {
@@ -21,11 +23,11 @@ namespace CarGame
         }
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.D))
+            if(Input.GetKeyDown(KeyCode.D))
             {
                 panel.SetActive(true);
             }
-
+            
             ToplananGold.text = "Altýn " + para;
         }
 
@@ -125,12 +127,31 @@ namespace CarGame
             Black
         }
 
+        public void MenuPaneliniAc()
+        {
+            panel.SetActive(true);
+
+        }
+
+
+        public void MenuPaneliniKapat()
+        {
+            panel.SetActive(false);
+
+        }
+
+
     }
+
+    
+
+
 
     public class CarSelectController
     {
         public GameObject SelectedCar { get; internal set; }
     }
 
+   
 
 }
