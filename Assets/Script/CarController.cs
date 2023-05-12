@@ -12,6 +12,8 @@ namespace CarGame
 
         public CarMovement carMovement;
 
+        public bool IsGameFinished { get; set; }
+
         public void StartCarMovement()
         {
             carMovement.canMove = true;
@@ -22,6 +24,7 @@ namespace CarGame
             if (other.CompareTag("Finish"))
             {
                 carMovement.canMove = false;
+                IsGameFinished = true;
             }
         }
 

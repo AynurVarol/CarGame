@@ -6,19 +6,31 @@ using static CarGame.ArabaHareket;
 public class GoldSpawner : MonoBehaviour
 {
 
-    public Gold goldRes;
+    public GameObject goldRes;
     public Vector3 offset = new Vector3(2, 0, 2);
+    public int countX, countZ;
 
-    public void SpawnGold(int count)
+
+    private void Start()
     {
-        for (int i = 0; i < count; i++)
-        {
-            var pos = transform.position + (offset * i);
+        SpawnGold();
+    }
 
-            // 1. pos = (0,0,0)
-            //2. pos =  (2,0,2)
-            //3.pos = (4,0,4)
-            Instantiate(goldRes, pos, Quaternion.identity);
+
+    public void SpawnGold()
+    {
+        for (int i = 0; i < countX; i++)
+        {
+            var x = transform.position.x + (offset.x * i);
+           
+
+            for (int k = 0; k < countZ; k++)
+            {
+                var z = transform.position.z + (offset.z * k);
+                var pos = new Vector3(x, transform.position.y, z);
+                Instantiate(goldRes, pos, Quaternion.identity);
+                Debug.Log("x = " + x + " z = " + z);
+            }
         }
     }
 

@@ -8,7 +8,6 @@ namespace CarGame
 
     public class GoldClon : MonoBehaviour
     {
-        public Joystick tus;
         public GameObject gold;
         public Transform konum1, konum2, konum3;
         public float spawnDuration = 4.0f;
@@ -20,20 +19,19 @@ namespace CarGame
 
         public const string diamond_tag = "Gold";
 
-
+        public void StartInstantiateGold()
+        {
+            InvokeRepeating("Clon", 0, spawnDuration);
+        }
 
 
         public void Clon()
         {
-            if (tus.Vertical > 0)
-            {
                 GameObject goldobje = Instantiate(gold, konum1.transform.position, Quaternion.identity);
                 GameObject goldobje2 = Instantiate(gold, konum2.transform.position, Quaternion.identity);
                 GameObject goldobje3 = Instantiate(gold, konum3.transform.position, Quaternion.identity);
                 Debug.Log("altýn objesi oluþturdu");
 
-
-            }
 
         }
 

@@ -12,34 +12,34 @@ namespace CarGame
         public CarController carController;
         public GoldSpawner goldSpawner;
         public CarMovement carMovement;
+        public GoldClon goldClone;
 
 
         public int goldCount;
-        public bool canMove;
 
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                goldSpawner.SpawnGold(goldCount);
+                goldSpawner.SpawnGold();
                 carController.StartCarMovement();
+                goldClone.StartInstantiateGold();
+            }
+            if (carController.IsGameFinished)
+            {
+                Debug.Log("oyun bitti");
             }
         }
 
       
-        public void StartCarMovement()
+        public void StartGame()
         {
-            carMovement.canMove = true;
+            carController.StartCarMovement();
 
         }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag("Finish"))
-            {
-                carMovement.canMove = false;
-            }
-        }
+
+
 
 
     }
