@@ -14,14 +14,13 @@ namespace CarGame
         public GameObject gold;
         public Gold goldRes;
 
-
         private GoldClon goldClon;
         private ArabaSatinAl _market;
         private object GoldSpawner;
 
         private void Start()
         {
-            InvokeRepeating("clon", 0, spawnDuration);
+            InvokeRepeating("Clon", 0, spawnDuration);
             _market = GameObject.FindGameObjectWithTag("Para").GetComponent<ArabaSatinAl>();
         }
 
