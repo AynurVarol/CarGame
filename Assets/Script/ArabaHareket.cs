@@ -12,13 +12,12 @@ namespace CarGame
         public float spawnDuration = 4.0f;
         public bool canMove;
         public GameObject gold;
+        public Gold goldRes;
 
 
         private GoldClon goldClon;
         private ArabaSatinAl _market;
-
-
-
+        private object GoldSpawner;
 
         private void Start()
         {
@@ -47,28 +46,14 @@ namespace CarGame
 
          }
 
-        
-
-      
-
-        public class GoldSpawner : MonoBehaviour
+        public void Goldolustur()
         {
-            public Gold goldRes;
-            public Vector3 offset = new Vector3(2, 0, 2);
-
-            public void SpawnGold(int count)
-            {
-                for (int i = 0; i < count; i++)
-                {
-                    var pos = transform.position + (offset * i);
-                    // 1. pos = (0,0,0)
-                    //2. pos =  (2,0,2)
-                    //3.pos = (4,0,4)
-                    Instantiate(goldRes, pos, Quaternion.identity);
-                }
-            }
-
+            GoldSpawner = goldRes.GetComponent<GoldSpawner>();
         }
+
+
+
+
 
         public class Gold : MonoBehaviour
         {
