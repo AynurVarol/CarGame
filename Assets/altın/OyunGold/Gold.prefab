@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1032235173380037354}
   - component: {fileID: 3613792108201831858}
   - component: {fileID: 5769617744428271118}
+  - component: {fileID: 6518984953635832806}
   m_Layer: 0
   m_Name: Gold
   m_TagString: Gold
@@ -112,3 +113,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &6518984953635832806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536783123941210943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b8f797b75952345b3b9c4bf1940cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldRes: {fileID: 1536783123941210943}
+  offset: {x: 2, y: 0, z: 2}
+  countX: 3
+  countZ: 500

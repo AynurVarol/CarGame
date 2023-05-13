@@ -15,7 +15,13 @@ namespace CarGame
         public Text sarýarabayazýsý, maviarabayazýsý, siyaharabayazýsý;
         public CarSelectController carSelector;
         public Text ToplananGold;
+        public int _yellowCarMoney = 300;
+        public int _blueCarMoney = 450;
+        public int _blackCarMoney = 600;
         
+            
+        
+
 
         private void Awake()
         {
@@ -81,9 +87,9 @@ namespace CarGame
 
         public void SarýAraba()
         {
-            if (para >= 300 || a1)
+            if (para >= _yellowCarMoney || a1)
             {
-                para -= 300;
+                para -= _yellowCarMoney;
                 OpenVehicle(CarType.Yellow, 1);
 
             }
@@ -93,9 +99,9 @@ namespace CarGame
 
         public void MaviAraba()
         {
-            if (para >= 450 || a2)
+            if (para >= _blueCarMoney || a2)
             {
-                para -= 450;
+                para -= _blueCarMoney;
 
                 OpenVehicle(CarType.Blue, 2);
 
@@ -107,9 +113,9 @@ namespace CarGame
 
         public void SiyahAraba()
         {
-            if (para >= 600 || a3)
+            if (para >= _blackCarMoney|| a3)
             {
-                para -= 600;
+                para -= _blackCarMoney;
 
                 OpenVehicle(CarType.Black, 3);
 
