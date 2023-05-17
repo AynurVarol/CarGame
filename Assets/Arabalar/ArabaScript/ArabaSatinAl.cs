@@ -28,7 +28,7 @@ namespace CarGame
         private void Awake()
         {
             carSelector = new CarSelectController();
-            menu.SetText(AnaArabam.ToString());
+            
             menu.SetText(_yellowCarMoney.ToString());
             menu.SetText(_blueCarMoney.ToString());
             menu.SetText(_blueCarMoney.ToString());
