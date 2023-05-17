@@ -10,7 +10,7 @@ namespace CarGame
     {
         public Canvas canvas;
         public Button purchaseButton;
-        public Button backButton;
+        public Button exitButton;
         public GameObject purchasePanel;
         public TMPro.TextMeshProUGUI purchaseText;
 
@@ -18,7 +18,7 @@ namespace CarGame
         {
             canvas.worldCamera = Camera.main;
             purchaseButton.onClick.AddListener(SetPanelActive);
-            backButton.onClick.AddListener(SetPanelActive);
+            exitButton.onClick.AddListener(SetPanelActive);
         }
 
         private void SetPanelActive()
