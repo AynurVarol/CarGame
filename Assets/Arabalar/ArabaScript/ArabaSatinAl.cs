@@ -19,6 +19,8 @@ namespace CarGame
         public int _blueCarMoney = 450;
         public int _blackCarMoney = 600;
         
+        public Menu2 menu;
+        
             
         
 
@@ -26,7 +28,13 @@ namespace CarGame
         private void Awake()
         {
             carSelector = new CarSelectController();
+            menu.SetText(AnaArabam.ToString());
+            menu.SetText(_yellowCarMoney.ToString());
+            menu.SetText(_blueCarMoney.ToString());
+            menu.SetText(_blueCarMoney.ToString());
         }
+
+      
         void Update()
         {
             if(Input.GetKeyDown(KeyCode.D))
